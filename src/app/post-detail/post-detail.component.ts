@@ -37,7 +37,6 @@ export class PostDetailComponent implements OnInit {
           (result) => {
             this.isError = false;
             this.postDetails = result;
-            console.log(this.postDetails);
           },
           (error) => {
             this.isError = true;

@@ -30,7 +30,8 @@
   "dataGroups": [{
     "name": "api-freshness",
     "urls": [
-      "/comments"
+      "/comments",
+      "/comments/**"
     ],
     "cacheConfig": {
       "maxSize": 1000,
@@ -41,8 +42,11 @@
   },{
     "name": "api-performance",
     "urls": [
+      "/",
       "/users",
-      "/posts"
+      "/users/**",
+      "/posts",
+      "/posts/**"
     ],
     "cacheConfig": {
       "maxSize": 10000,
