@@ -1,0 +1,20 @@
+<mat-card class="card-body">
+    <mat-card-header *ngIf="!isError">
+        <mat-card-title>{{userDetails?.name}}</mat-card-title>
+        <mat-card-subtitle>{{userDetails?.email}}, {{userDetails?.phone}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-header *ngIf="isError">
+        <mat-card-subtitle>Failed to get the details of users...</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content *ngIf="!isError">
+        <mat-card><h1>Posts</h1></mat-card>
+        <mat-card class="post-style" *ngFor="let post of posts" (click)="postDetails(post.id)">
+            <mat-card-header>
+                <h2>{{post.title}}</h2>
+            </mat-card-header>
+            <mat-card-content>
+                {{post.body}}
+            </mat-card-content>
+        </mat-card>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,4 @@
+<mat-list *ngFor="let user of users">
+    <mat-list-item (click)="gotoUserDetails(user.id)">{{user.name}}</mat-list-item>
+    <mat-divider></mat-divider>
+</mat-list>
